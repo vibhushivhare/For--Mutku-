@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Vedu</title>
+<style>
+body{margin:0;background:#111;color:#f7f2ee;font-family:system-ui;display:flex;align-items:center;justify-content:center;height:100vh;overflow:hidden}
+.card{max-width:360px;padding:28px;border-radius:20px;background:#1b1b1b;box-shadow:0 0 30px rgba(255,255,255,.08);text-align:center}
+button{margin-top:18px;padding:12px 20px;border:0;border-radius:999px;background:#f2c9c9}
+.heart{position:fixed;bottom:-20px;font-size:18px;animation:f 8s linear infinite;opacity:.5}
+@keyframes f{to{transform:translateY(-120vh)}}
+</style></head><body>
+<div id="hearts"></div>
+<div class="card">
+<h2 id=t>⚠️ Routine Questions Deleted</h2>
+<p id=m>❌ Khana khaya?<br>❌ Gym gayi?<br>❌ Nap li?<br><br>Update installed ❤️</p>
+<button onclick="n()">Continue</button>
+</div>
+<script>
+for(let i=0;i<18;i++){let d=document.createElement('div');d.className='heart';d.innerHTML='🤍';d.style.left=Math.random()*100+'vw';d.style.animationDelay=(Math.random()*8)+'s';document.body.appendChild(d);}
+const s=[
+["Scanning...","You're not someone's timetable.<br><br>You're someone's favourite notification. ✨"],
+["Confession","Kal tumhari ek baat dimag me reh gayi.<br><br>Shayad main routine zyada poochhta tha, tumhari feelings kam.<br><br>Thank you mujhe realize karane ke liye. 🤍"],
+["New Rules","❌ Interview nahi.<br>✅ Random bakwaas.<br>✅ Hasi.<br>✅ Tumhari company."],
+["Good Morning Vedu 🌸","Aaj tum reply karo ya mat karo...<br>Bas itna kehna tha ki agli baar jab baat hogi, interview nahi hoga.<br><br>Bas hope karta hoon tum ek baar smile kar do. 😊<br><br><b>Mission: Smile Restored ❤️</b>"]
+];
+let i=0;
+function n(){if(i<s.length){t.innerHTML=s[i][0];m.innerHTML=s[i][1];i++;if(i==s.length)document.querySelector('button').textContent='Smile 😊';}else{document.querySelector('button').style.display='none';}}
+</script>
+</body></html>
